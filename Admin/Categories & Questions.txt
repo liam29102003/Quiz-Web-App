@@ -1,0 +1,97 @@
+Categories
+1,General Knowledge
+2,Entertainment: Books
+3,Entertainment: Film
+4,Entertainment: Music
+5,Entertainment: Musicals & Theatres
+6,Entertainment: Television
+7,Entertainment: Video Games
+8,Entertainment: Board Games
+9,Science & Nature
+10,Science: Computers
+11,Science: Mathematics
+12,Mythology
+13,Sports
+14,Geography
+15,History
+16,Politics
+17,Art
+18,Celebrities
+19,Animals
+20,Vehicles
+21,Entertainment: Comics
+22,Science: Gadgets
+23,Entertainment: Japanese Anime & Manga
+24,Entertainment: Cartoon & Animations
+
+
+1,General Knowledge
+easy   -> 100 questions(question id 1 to 100)
+medium -> 100 questions(question id 101 to 200)
+hard   -> 57 questions (question id 201 to 257)
+
+10,Science: Computers
+easy   -> 37 questions(question id 258 to 294)
+medium -> 50 questions(question id 295 to 344)
+hard   -> 34 questions (question id 345 to 378)
+
+9,Science & Nature
+easy   -> 49 questions(question id 379 to 427)
+medium -> 50 questions(question id 428 to 477)
+hard   -> 50 questions (question id 478 to 527)
+
+13,Sports
+easy   -> 100 questions(question id 528 to 570)
+medium -> 100 questions(question id 571 to 620)
+hard   -> 57 questions (question id 621 to 641)
+
+14,Geography
+easy   -> 100 questions(question id 642 to 691)
+medium -> 100 questions(question id 692 to 742)
+hard   -> 57 questions (question id 743 to 792)
+
+15,History
+easy   -> 100 questions(question id 793 to 844)
+medium -> 100 questions(question id 845 to 864),(question id 917 to 952)
+hard   -> 57 questions (question id 865 to 916)
+
+2,Entertainment: Books
+easy   -> 100 questions(question id 953 to 977)
+medium -> 100 questions(question id 978 to 1002)
+hard   -> 57 questions (question id 1003 to 1027)
+
+6,Entertainment: Television
+easy   -> 100 questions(question id 1028 to 1077)
+medium -> 100 questions(question id 1078 to 1128)
+hard   -> 57 questions (question id 1129 to 1157)
+
+7,Entertainment: Video Games
+easy   -> 100 questions(question id 1158 to 1207)
+medium -> 100 questions(question id 1208 to 1265)
+hard   -> 57 questions (question id 1266 to 1317)
+
+23,Entertainment: Japanese Anime & Manga
+easy   -> 100 questions(question id 1318 to 1361)
+medium -> 100 questions(question id 1362 to 1414)
+hard   -> 57 questions (question id 1415 to 1450)
+
+24,Entertainment: Cartoon & Animations
+easy   -> 100 questions(question id 1451 to 1470)
+medium -> 100 questions(question id 1471 to 1485)
+hard   -> 57 questions (question id 1415 to 1500)
+______________________________________________
+No Question Categories
+3,Entertainment: Film
+4,Entertainment: Music
+5,Entertainment: Musicals & Theatres
+8,Entertainment: Board Games
+11,Science: Mathematics
+12,Mythology
+16,Politics
+17,Art
+18,Celebrities
+19,Animals
+20,Vehicles
+21,Entertainment: Comics
+22,Science: Gadgets
+

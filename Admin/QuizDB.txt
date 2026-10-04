@@ -1,0 +1,53 @@
+CREATE TABLE category (
+    id SERIAL PRIMARY KEY,
+    category_name VARCHAR(50) UNIQUE NOT NULL,
+    category_photo VARCHAR(255),
+    is_api BOOLEAN NOT NULL DEFAULT FALSE,
+    api_id INTEGER
+);
+
+CREATE TABLE question (
+    id SERIAL PRIMARY KEY,
+    question TEXT NOT NULL,
+    incorrect_answers TEXT[] NOT NULL,
+    correct_answer VARCHAR(255) NOT NULL,
+    category_id INT NOT NULL,
+    difficulty_level VARCHAR(10) CHECK (difficulty_level IN ('easy', 'medium', 'hard')), 
+    FOREIGN KEY (category_id) REFERENCES category(id) ON DELETE CASCADE
+);
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    country VARCHAR(30) NOT NULL,
+    coins INT DEFAULT 0 CHECK (coins >= 0),
+    score JSONB NOT NULL DEFAULT '{}'::JSONB,
+    profile_picture VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE admin (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    profile_picture TEXT
+);
+
+CREATE TABLE user_history (
+    id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
+    category_id INT NOT NULL,
+    question_id INTEGER[] NOT NULL,
+    answer TEXT[] NOT NULL,
+    final_score INT DEFAULT 0 CHECK (final_score >= 0),
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (category_id) REFERENCES category(id) ON DELETE CASCADE,
+    CHECK (array_length(question_id, 1) = array_length(answer, 1))
+);
+
+-- Add an index for better query performance
+CREATE INDEX idx_user_history_user_id ON user_history(user_id);
